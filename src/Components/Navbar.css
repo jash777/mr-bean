@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  font-size: 49px;
+  text-align: justify;
+  color: #836648;
+  position: relative; /* Changed from bottom to relative positioning */
+  margin-left: 35rem;
+  font-weight: 100;
+}
+
+.navbar {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  width: 80%;
+  height: 5.95%;
+  margin: auto;
+  box-shadow: 0 0 10px #0005;
+  gap: 0.7rem;
+  border-radius: 5rem;
+  background-color: #d9d9d96e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+}
+
+.logo {
+  width: 100px; /* Adjust the width of the logo as needed */
+  height: auto;
+  margin-right: 10px; /* Adjust margin as needed */
+  position: relative;
+}
+
+.nav-link {
+  margin-left: 50px; /* Adjust margin between links as needed */
+  text-decoration: none;
+  letter-spacing: 2.5px;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  margin-right: 30px;
+  color: #000000;
+  font-size: 30px;
+  transition: color 0.3s ease; /* Smooth transition effect for color change */
+}
+
+.nav-link:hover {
+  color: #8d6e4f; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 40px;
+    margin-left: 20rem;
+  }
+
+  .nav-link {
+    font-size: 25px;
+    margin-left: 40px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 35px;
+    margin-left: 15rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .nav-link {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 30px;
+    margin-left: 10rem;
+  }
+
+  .nav-link {
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 5px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 25px;
+    margin-left: 5rem;
+    text-align: center;
+  }
+
+  .navbar {
+    width: 90%;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+}
