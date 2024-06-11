@@ -1,15 +1,212 @@
-.about {
-    color: aliceblue;
-    width: 10%;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    margin-left: 7%;
-    opacity: 77%;
-    position: absolute;
+.about{
+  color: aliceblue;
+  width: 10%;
+  margin-left: 25%;
+  bottom: -20%;
+  opacity: 0.77; /* Use decimal values for opacity */
+  position: relative;
+
+}
+.about-svg {
+  max-width: 50%;
+  position: relative;
 }
 .aboutheading {
-    margin-left: 197%;
-    margin-top: -90%;
-    width: 490%;
-    margin-bottom: 9%;
+  margin-left: 1%;
+  margin-top: -3%;
+  width: 45%;
+  margin-bottom: 5%;
+  
+}
+.aboutheadingclass{
+  margin-bottom: -8%;
+  margin-top: 5%;
+}
+.aboutsvgclass{
+  margin-bottom: 25%;
+}
+@media (max-width: 576px) {
+  .about-svg {
+    max-width: 100%;
+    position: relative;
+  }
+  .aboutheading {
+    width: 85%;
+    
+  }
+  .aboutheadingclass{
+    margin-bottom: 5%;
+    margin-top: -55%;
+
+  }
+  .aboutsvgclass{
+    margin-bottom: 5%;
+  }
+  
+}
+
+/* Start About Us */
+.about-us {
+  padding: 30px 0;
+  background-color: transparent
+}
+.about-us .h1 {
+  font-size: 50px;
+  color: #848484
+}
+.about-us .responsive-paragraph {
+  color: #848484;
+}
+/* End About Us */
+
+/* Start Media Query */
+@media (max-width: 767px) { /* Mobile & Tablet Rules */
+  .visible-xs {
+      display: block !important
+  }
+  .hidden-xs {
+      display: none !important
+  }
+  .responsive-paragraph {
+      font-size: 13px !important;
+      color: #8D6E4F !important;
+      letter-spacing: 1.4px;
+      text-align: justify;
+      margin-bottom: 20%;
+      margin-top: 10%;
+      max-width: 94%;
+      margin-left: 4%;
+      font-weight: bold;
+      
+      
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) { /* Small Screen Rules */
+  .container {
+      width: 750px
+  }
+  .visible-sm {
+      display: block !important
+  }
+  .hidden-sm {
+      display: none !important
+  }
+  .responsive-paragraph {
+      text-align: center;
+      font-size: 17px !important;
+      color: #555 !important;
+      letter-spacing: 1.3px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) { /* Medium Screen Rules */
+  .container {
+      width: 970px
+  }
+  .visible-md {
+      display: block !important
+  }
+  .hidden-md {
+      display: none !important
+  }
+  .responsive-paragraph {
+      font-size: 20px !important;
+      color: #777 !important;
+      letter-spacing: 1.1px;
+  }
+}
+@media (min-width: 1200px) { /* Large Screen Rules */
+  .container {
+      width: 1170px
+  }
+  .visible-lg {
+      display: block !important
+  }
+  .hidden-lg {
+      display: none !important
+  }
+}
+
+.spanner {
+  width: 90%; /* Adjust width as needed */
+  height: 2px; /* Adjust height as needed */
+  background-color: #b98a5a; /* White color for the spanner */
+  margin-left: 5%; /* Move the line to the left by adjusting margin */
+  margin-bottom: 5%;
+}
+
+.spannerA {
+  width: 90%; /* Adjust width as needed */
+  height: 2px; /* Adjust height as needed */
+  background-color: #b98a5a; /* White color for the spanner */
+  margin-left: 5%; /* Move the line to the left by adjusting margin */
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+/* Car styles and animation */
+.car {
+  position: absolute;
+  top: calc(50% - 15px); /* Adjust to vertically center the car over the line */
+  left: 0;
+  animation: moveCar 5s linear infinite;
+}
+
+@keyframes moveCar {
+  0% {
+      left: 0;
+  }
+  100% {
+      left: 100%;
+  }
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .spanner {
+      width: 90%;
+      left: 5%;
+  }
+  .spannerA {
+    width: 90%;
+    left: 5%;
+}
+
+  .car {
+      animation: moveCar768 5s linear infinite;
+  }
+
+  @keyframes moveCar768 {
+      0% {
+          left: 5%;
+      }
+      100% {
+          left: 95%;
+      }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .spanner {
+      width: 100%;
+      left: 2.5%;
+      margin-left: 1.25%;
+
+  }
+  .spannerA {
+    width: 100%;
+    left: 2.5%;
+    margin-left: 1.25%;
+}
+  .car {
+      animation: moveCar480 5s linear infinite;
+  }
+
+  @keyframes moveCar480 {
+      0% {
+          left: 2.5%;
+      }
+      100% {
+          left: 97.5%;
+      }
+  }
 }

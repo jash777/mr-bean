@@ -112,9 +112,11 @@
 
 @media (max-width: 576px) {
   .title {
-    font-size: 25px;
+    font-size: 30px;
     margin-left: 5rem;
     text-align: center;
+    font-weight: bolder;
+    left: -25%;
   }
 
   .navbar {
@@ -124,12 +126,14 @@
   }
 
   .nav-link {
-    font-size: 16px;
-    margin-left: 10px;
-    margin-right: 5px;
+    font-size: 1px;
+    left: 40%;
+    display: hide;
   }
 
   .logo {
-    width: 60px;
+    width: 50px;
+    left: -19%;
+    position: flex;
   }
 }

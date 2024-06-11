@@ -1,8 +1,9 @@
-// HomePage.js
 import React, { useEffect, useState } from 'react';
 import './Homepage.css';
 import mrBeanSVG from './mrbean.svg';
 import socialmediaicon from './socialmedia.svg';
+import responsiveSocialmediaicon from './icons-mobile.svg'; // Add the responsive SVG
+
 import ErrorBoundary from './ErrorBoundary';
 
 function HomePage() {
@@ -34,8 +35,11 @@ function HomePage() {
   return (
     <ErrorBoundary>
       <div className="home-page">
+        <div className='mrsvg'>
         <img src={mrBeanSVG} alt="Mr. Bean" className="mr-bean-svg" />
-        <div className='social-media-icon-pack'>
+
+        </div>
+        <div className="social-media-icon-pack">
           <a href="#" target="_blank" rel="noopener noreferrer">
             <img src={socialmediaicon} alt="socialmedia" className="socialmedia" />
           </a>

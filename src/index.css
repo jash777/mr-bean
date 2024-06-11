@@ -6,10 +6,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000;
-
+  padding: 20px; /* Added padding for better spacing on small screens */
+  box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 600px) {
+  body {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
 }
