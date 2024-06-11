@@ -3,13 +3,10 @@
     position: fixed;
     z-index: 9999;
     pointer-events: none;
+    width: 50px;
+    border-radius: 20px;
 }
 
-.custom-cursor img {
-    width: 30px; /* Adjust size as needed */
-    height: 30px; /* Adjust size as needed */
-}
-/* CustomCursor.css */
 body {
     cursor: none; /* Hide default cursor */
 }
