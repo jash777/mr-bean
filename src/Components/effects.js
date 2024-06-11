@@ -1,82 +1,55 @@
-import React, { useEffect } from 'react';
-import { ReactComponent as TokonomicsSVG } from './tokonomics.svg';
-import './tokonomics.css';
-import tokonomicsheading from './tokonomicsheading.svg'
-function Tokonomics() {
-  useEffect(() => {
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to add bounce effect to a1 (bounces to right)
     function addBounceEffectA1(event) {
       var element = document.getElementById('a1');
-      element.classList.remove('bounce-rightA');
+      element.classList.remove('bounce-rightA'); // Remove previous animation class if any
       element.classList.add('bounce-rightA');
       setTimeout(function() {
         element.classList.remove('bounce-rightA');
-      }, 500);
+      }, 500); // Adjust timing to match animation duration
     }
-
+    
+    // Function to add bounce effect to a2 (bounces to left)
     function addBounceEffectA2(event) {
       var element = document.getElementById('a2');
-      element.classList.remove('bounce-leftA');
+      element.classList.remove('bounce-leftA'); // Remove previous animation class if any
       element.classList.add('bounce-leftA');
       setTimeout(function() {
         element.classList.remove('bounce-leftA');
-      }, 500);
+      }, 500); // Adjust timing to match animation duration
     }
-
+    
     function addBounceEffectA3(event) {
       var element = document.getElementById('a3');
-      element.classList.remove('bounce-left');
+      element.classList.remove('bounce-left'); // Remove previous animation class if any
       element.classList.add('bounce-left');
       setTimeout(function() {
         element.classList.remove('bounce-left');
-      }, 500);
+      }, 500); // Adjust timing to match animation duration
     }
-
+    
     function addBounceEffectA4(event) {
       var element = document.getElementById('a4');
-      element.classList.remove('bounce-left');
+      element.classList.remove('bounce-left'); // Remove previous animation class if any
       element.classList.add('bounce-left');
       setTimeout(function() {
         element.classList.remove('bounce-left');
-      }, 500);
+      }, 500); // Adjust timing to match animation duration
     }
-
+    
     function addBounceEffectA5(event) {
       var element = document.getElementById('a5');
-      element.classList.remove('bounce-right');
+      element.classList.remove('bounce-right'); // Remove previous animation class if any
       element.classList.add('bounce-right');
       setTimeout(function() {
         element.classList.remove('bounce-right');
-      }, 500);
+      }, 500); // Adjust timing to match animation duration
     }
-
+    
+    // Add click event listeners to each item in the SVG
     document.getElementById('a1').addEventListener('click', addBounceEffectA1);
     document.getElementById('a2').addEventListener('click', addBounceEffectA2);
     document.getElementById('a3').addEventListener('click', addBounceEffectA3);
     document.getElementById('a4').addEventListener('click', addBounceEffectA4);
     document.getElementById('a5').addEventListener('click', addBounceEffectA5);
-
-    // Cleanup
-    return () => {
-      document.getElementById('a1').removeEventListener('click', addBounceEffectA1);
-      document.getElementById('a2').removeEventListener('click', addBounceEffectA2);
-      document.getElementById('a3').removeEventListener('click', addBounceEffectA3);
-      document.getElementById('a4').removeEventListener('click', addBounceEffectA4);
-      document.getElementById('a5').removeEventListener('click', addBounceEffectA5);
-    };
-  }, []); // Empty dependency array to ensure effect runs only once
-
-  return (
-    <div className="tokonomics">
-      <div>
-      <img src={tokonomicsheading} alt="tokonomicsheading" className="tokonomicsheading" />
-      </div>
-      <div className='tokonomicscss'>
-      <TokonomicsSVG />
-
-      </div>
-    </div>
-  );
-}
-
-export default Tokonomics;
-
+});

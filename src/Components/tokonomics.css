@@ -1,5 +1,74 @@
 .tokonomics {
     margin-left: 220px;
     width: 75%;
-    padding-top: 33%;
+    padding-top: 59%;
+    margin-bottom: 5%;
+}
+.tokonomicscss {
+  margin-left: 260px;
+  width: 75%;
+}
+.bounce-right {
+    animation: bounceRight 0.5s ease;
+  }
+  .bounce-rightA {
+    animation: bounceRightA 0.5s ease;
+  }
+  .bounce-left {
+    animation: bounceLeft 0.5s ease;
+  }
+  .bounce-leftA {
+    animation: bounceLeftA 0.5s ease;
+  }
+
+  @keyframes bounceRight {
+    0% {
+      transform: translateX(50);
+    }
+    50% {
+      transform: translateX(20px);
+    }
+    100% {
+      transform: translateX(50);
+    }
+  }
+  @keyframes bounceRightA {
+    0% {
+      transform: translate(50,0);
+    }
+    50% {
+      transform: translate(20px,-13px);
+    }
+    100% {
+      transform: translate(50,0);
+    }
+  }
+  @keyframes bounceLeft {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-25px, 2px); /* Adjusted values for slight right and up movement */
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes bounceLeftA {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-25px, -13px); /* Adjusted values for slight right and up movement */
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+.tokonomicsheading{
+  margin-left: 8%;
+  margin-top: -15%;
+  width: 65%;
+  margin-bottom: 5%;
 }
