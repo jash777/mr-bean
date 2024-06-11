@@ -1,21 +1,47 @@
 // HomePage.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Homepage.css';
-import CustomCursor from './CustomCursor'; // Import CustomCursor component
 import mrBeanSVG from './mrbean.svg';
 import socialmediaicon from './socialmedia.svg';
+import ErrorBoundary from './ErrorBoundary';
 
 function HomePage() {
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    // Log any unhandledrejection errors
+    window.addEventListener('unhandledrejection', (event) => {
+      console.error('Unhandled rejection (promise):', event.promise, 'reason:', event.reason);
+      setHasError(true);
+    });
+
+    // Log any unexpected errors
+    window.addEventListener('error', (event) => {
+      console.error('Error event:', event);
+      setHasError(true);
+    });
+
+    return () => {
+      window.removeEventListener('unhandledrejection', () => {});
+      window.removeEventListener('error', () => {});
+    };
+  }, []);
+
+  if (hasError) {
+    return <h1>Something went wrong in HomePage component.</h1>;
+  }
+
   return (
-    <div className="home-page">
-      <CustomCursor /> {/* Include CustomCursor component */}
-      <img src={mrBeanSVG} alt="Mr. Bean" className="mr-bean-svg" />
-      <div className='social-media-icon-pack'>
-        <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
-          <img src={socialmediaicon} alt="socialmedia" className="socialmedia" />
-        </a>
+    <ErrorBoundary>
+      <div className="home-page">
+        <img src={mrBeanSVG} alt="Mr. Bean" className="mr-bean-svg" />
+        <div className='social-media-icon-pack'>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src={socialmediaicon} alt="socialmedia" className="socialmedia" />
+          </a>
+        </div>
       </div>
-    </div>
+    </ErrorBoundary>
   );
 }
 
