@@ -49,19 +49,23 @@ function Tokonomics() {
       }, 500);
     }
 
+    document.getElementById('a1').addEventListener('mouseover', addBounceEffectA1);
     document.getElementById('a1').addEventListener('click', addBounceEffectA1);
-    document.getElementById('a2').addEventListener('click', addBounceEffectA2);
-    document.getElementById('a3').addEventListener('click', addBounceEffectA3);
-    document.getElementById('a4').addEventListener('click', addBounceEffectA4);
-    document.getElementById('a5').addEventListener('click', addBounceEffectA5);
+
+    document.getElementById('a2').addEventListener('mouseover', addBounceEffectA2);
+    document.getElementById('a3').addEventListener('mouseover', addBounceEffectA3);
+    document.getElementById('a4').addEventListener('mouseover', addBounceEffectA4);
+    document.getElementById('a5').addEventListener('mouseover', addBounceEffectA5);
 
     // Cleanup
     return () => {
+      document.getElementById('a1').removeEventListener('mouseover', addBounceEffectA1);
       document.getElementById('a1').removeEventListener('click', addBounceEffectA1);
-      document.getElementById('a2').removeEventListener('click', addBounceEffectA2);
-      document.getElementById('a3').removeEventListener('click', addBounceEffectA3);
-      document.getElementById('a4').removeEventListener('click', addBounceEffectA4);
-      document.getElementById('a5').removeEventListener('click', addBounceEffectA5);
+
+      document.getElementById('a2').removeEventListener('mouseover', addBounceEffectA2);
+      document.getElementById('a3').removeEventListener('mouseover', addBounceEffectA3);
+      document.getElementById('a4').removeEventListener('mouseover', addBounceEffectA4);
+      document.getElementById('a5').removeEventListener('mouseover', addBounceEffectA5);
     };
   }, []); // Empty dependency array to ensure effect runs only once
 
